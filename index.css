@@ -6,6 +6,7 @@
     --color-text-light: #fff;
 }
 
+
 /* Reset some default styles */
 body, h1, h2, p {
     margin: 0;
@@ -19,6 +20,10 @@ body {
 
 .container {
     width: 80%;
+    margin: 0 auto;
+}
+.center-content {
+    text-align: center;
 }
 
 .container-fluid {
@@ -50,11 +55,16 @@ h2 {
 h3 {
     font-size: var(--font-size-h3);
     font-weight: 600;
+    margin-bottom: 3px;
 }
 
 p {
     font-size: var(--font-size-p);
     font-weight: var(--font-weight-regular);
+}
+.icon {
+    font-size: 50px;
+    margin: 0 3%;
 }
 
 /* Header Styles */
@@ -68,6 +78,7 @@ nav ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 6%;
 }
 
 
@@ -82,7 +93,7 @@ nav a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 60px 0;
+    padding: 5% 0;
 }
 
 .cta-button {
@@ -94,10 +105,12 @@ nav a {
     text-decoration: none;
 }
 
-.body-bold {
+.body-bold {  
     font-size: var(--font-size-h2);
     font-weight: var(--font-weight-regular);
     text-align: center;
+    width: 70%;
+    margin: 4% auto;   
 }
 
 /* Content Section Styles */
@@ -108,6 +121,11 @@ nav a {
 .landingtext {
     margin: 2%;
     width: 60%;
+}
+.feature-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 /* Footer Styles */
