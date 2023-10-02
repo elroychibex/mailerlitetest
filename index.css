@@ -1,3 +1,11 @@
+/* Color Variables */
+:root {
+    --color-primary: #4F46E4;
+    --color-background: #f2f2f2;
+    --color-text: #0B0D17;
+    --color-text-light: #fff;
+}
+
 /* Reset some default styles */
 body, h1, h2, p {
     margin: 0;
@@ -8,62 +16,87 @@ body, h1, h2, p {
 body {
     font-family: Inter, sans-serif;
 }
+
+.container {
+    width: 80%;
+}
+
+.container-fluid {
+    width: 100%;
+}
+.wrap {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Typography Variables */
+:root {
+    --font-size-h1: 42px;
+    --font-size-h2: 26px;
+    --font-size-h3: 20px;
+    --font-size-p: 16px;
+    --font-weight-bold: 700;
+    --font-weight-regular: regular;
+}
+
 h1 {
-    font-size: 42px;
-    font-weight: 700;
+    font-size: var(--font-size-h1);
+    font-weight: var(--font-weight-bold);
 }
 h2 {
-    font-size: 26;
-    font-weight: 700;
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-bold);
 }
 h3 {
-font-size: 20px;
-font-weight: 600;
+    font-size: var(--font-size-h3);
+    font-weight: 600;
 }
 
 p {
-    font-size: 16px;
-    font-weight: regular;
+    font-size: var(--font-size-p);
+    font-weight: var(--font-weight-regular);
 }
 
 /* Header Styles */
 header {
-    color: #0B0D17;
+    color: var(--color-text);
     padding: 10px 0;
 }
 
 nav ul {
     list-style-type: none;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
 }
 
-nav li {
-    margin: 0 20px;
-}
 
 nav a {
     text-decoration: none;
-    color: #0B0D17;
+    color: var(--color-text);
 }
 
 /* Hero Section Styles */
 .hero {
-    background-color: #f2f2f2;
-    text-align: center;
+    background-color: var(--color-background);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 60px 0;
 }
 
 .cta-button {
     display: inline-block;
-    background-color: #4F46E4;
-    color: #fff;
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
     padding: 10px 20px;
+    margin: 0 1rem;
     text-decoration: none;
 }
+
 .body-bold {
-    font-size: 26;
-    font-weight: regular;
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-regular);
     text-align: center;
 }
 
@@ -72,10 +105,78 @@ nav a {
     padding: 20px;
 }
 
+.landingtext {
+    margin: 2%;
+    width: 60%;
+}
+
 /* Footer Styles */
 footer {
-    background-color: #0B0D17;
-    color: #fff;
+    background-color: var(--color-text);
+    color: var(--color-text-light);
     text-align: center;
     padding: 10px 0;
+}
+
+/* Responsive Design */
+
+/* Mobile Screens */
+@media (max-width: 767px) {
+    .container-fluid {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: var(--font-size-h2);
+    }
+
+    h2 {
+        font-size: var(--font-size-h3);
+    }
+
+    h3 {
+        font-size: var(--font-size-h3);
+    }
+
+    p {
+        font-size: var(--font-size-p);
+    }
+
+    nav ul {
+        align-items: center;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+
+    .hero {
+        padding: 40px 0;
+    }
+
+    .cta-button {
+        margin-top: 10px;
+    }
+
+    .body-bold {
+        font-size: var(--font-size-h3);
+    }
+
+    .content {
+        padding: 10px;
+    }
+}
+
+/* Tablet Screens */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container-fluid {
+        width: 90%;
+    }
+}
+
+/* Desktop Screens */
+@media (min-width: 1025px) {
+    .container-fluid {
+        width: 80%;
+    }
 }
